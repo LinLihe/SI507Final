@@ -90,38 +90,36 @@ The python file `SI507_Final_code.py` contains codes to do the following:
   5) `hard_path`: User should input a path which is the place to store all data cached by this code.
 
 
-* **4. Use `localhost:5000` to see result**
-	
-
-  3. Several local links you can use to get data:
-
-
-	  	1) `localhost:5000/player`: **Show any player's data.** 
-	  	**Instruction**: This link will show a textbox. You can type any word in it, even parts of a name and click `Send`, then you will see all players' data whose name (first name and last name) includes the word you typed before. The data is from the "Players" table.
-	  	**Example**: Type "james" (or "ame") into textbox and click "Send", you will see several players whose name includes "james" ("ame"). If you type "lebron james", only one result will be showed. If no player's name includes the word you type, you will see "there is no result!" in the page. 
-
-        Note: 
-        Input is case insensitive, so do not worry about capitalization of first letter. So does the search for team!
-        There may be several players have same name but in different team, which means one player was traded during the season.
-
-
-	  	2) `localhost:5000/team`: **Show any team's data.**
-	  	**Instruction**: Same as checking player's data, but you should type team's name this time. The data is from the "Teams" table.
-	  	**Example**: Type "hawks" in the textbox and "send", you will see the data of team Atlanta Hawks. 
-
-	  	3) `localhost:5000/mvp`: **Show the best player of each team.**
-	  	**Instruction**: The  There is no input. You should be able to see 30 players' name, points, rebounds, assists and team in the page. The "Best player" is defined as the player who gets the largest number of the sum of "Point", "Rebound", and "Assist". 30 players should be different if the season is different. The data is from the "Players" table.
-
-	  	4) `localhost:5000/player/average`: **Show the average data for all nba players**.
-	  	**Instruction**: There is no input. You should be able to see the average data which is for all NBA players. One thing need to be declared is that "all players" only includes players whose "Minute" is larger than 10.0 in order to filter out players who only playe in "garbage time".
-
-	  	5) `localhost:5000/mvp/percentage`: **Show the best players in each team contribute how much in team's points, rebounds and assists (in percentage).**
-	  	**Instruction**: There is no input. You can see the 30 player's name, player's point to team's point in percentage, player's rebound to team's rebound in percentage, player's assist to team's assist in percentage and team's name. The result is calculated by the data from table "Players" and table "Teams"
-
-* **5. Whole process of running the code**: Assume `Cache_data_and_reset_table = True`, and there is no data cached before. 
+* **4. Whole process of running the code**: Assume `Cache_data_and_reset_table = True`, and there is no data cached before. 
 
   0) In Git, run `python3 SI507_Final_code runserver`.
   1) The code will access and cache the hoops stats website http://www.hoopsstats.com/ to get each team's page (eg. Atlanta Hawks in season 2017-2018: http://www.hoopsstats.com/basketball/fantasy/nba/atlanta-hawks/team/profile/18/1) and team's player's page (eg. Atlanta Hawks in season 2017-2018: http://www.hoopsstats.com/basketball/fantasy/nba/atlanta-hawks/team/playerstats/18/1/1). Therefore, in the folder you choose to store data, there should be 30 html files for teams, 30 html files for teams' players, and 1 html file for hoops stats main page. 
   2) Pass the teams' and players' data collected from these pages to two classes we set up before and we will get two list named "team_list" and "player_list" respectively. The elements of the former one are all instance of "nba_team" class and the elements of the latter one are all instance of "nba_player" class.
   3) Use these two lists to input data into database to build `Players` and 'Teams' tables.
   4) Finally, we are able to open the web browser, input `localhost:5000` in address bar. We should be able to see "Welcome to NBA databse" on the screen if everything goes right.
+
+* **5. Use `localhost:5000` to see result**
+	
+1) `localhost:5000/player`: **Show any player's data.** 
+**Instruction**: This link will show a textbox. You can type any word in it, even parts of a name and click `Send`, then you will see all players' data whose name (first name and last name) includes the word you typed before. The data is from the "Players" table.
+**Example**: Type "james" (or "ame") into textbox and click "Send", you will see several players whose name includes "james" ("ame"). If you type "lebron james", only one result will be showed. If no player's name includes the word you type, you will see "there is no result!" in the page. 
+
+	Note: 
+	Input is case insensitive, so do not worry about capitalization of first letter. So does the search for team!
+	There may be several players have same name but in different team, which means one player was traded during the season.
+
+
+2) `localhost:5000/team`: **Show any team's data.**
+**Instruction**: Same as checking player's data, but you should type team's name this time. The data is from the "Teams" table.
+**Example**: Type "hawks" in the textbox and "send", you will see the data of team Atlanta Hawks. 
+
+3) `localhost:5000/mvp`: **Show the best player of each team.**
+**Instruction**: The  There is no input. You should be able to see 30 players' name, points, rebounds, assists and team in the page. The "Best player" is defined as the player who gets the largest number of the sum of "Point", "Rebound", and "Assist". 30 players should be different if the season is different. The data is from the "Players" table.
+
+4) `localhost:5000/player/average`: **Show the average data for all nba players**.
+**Instruction**: There is no input. You should be able to see the average data which is for all NBA players. One thing need to be declared is that "all players" only includes players whose "Minute" is larger than 10.0 in order to filter out players who only playe in "garbage time".
+
+5) `localhost:5000/mvp/percentage`: **Show the best players in each team contribute how much in team's points, rebounds and assists (in percentage).**
+**Instruction**: There is no input. You can see the 30 player's name, player's point to team's point in percentage, player's rebound to team's rebound in percentage, player's assist to team's assist in percentage and team's name. The result is calculated by the data from table "Players" and table "Teams"
+
+
