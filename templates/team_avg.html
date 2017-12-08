@@ -1,0 +1,8 @@
+<h1>Team's average data in season {{season}}</h1>
+{% for item in avg_dict %}
+	{% for key in item %}
+	<b> {{key}} : {{item[key]}} <br> </b>
+	{% endfor %}
+	<br>
+{% endfor %}
+	

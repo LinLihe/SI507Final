@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Player data</title>
+</head>
+	<body>
+		<div class="content">
+			<h1>The team's data in season {{season}}</h1>
+            <form action="/team" method="get">
+                <label>
+                	<b>Input name here: </b>
+                    <input type="text" name="name">
+                </label>
+                <button type = "submit">Send</button> 
+			<p class = "response">
+				{% if team_output %}
+					{% for item in team_output %}
+						{% for key in item %}
+						<b> {{key}} : {{item[key]}} <br> </b>
+						{% endfor %}
+						<br>
+					{% endfor %}
+				{% else %}
+					There is no result! 	
+				{% endif %}				
+			</p>
+		</div>
+	</body>
+</html>

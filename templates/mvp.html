@@ -1,0 +1,13 @@
+<h1>Each team best player's data in season {{season}}</h1>
+<h2>Average data</h2>
+{% for k in dic %}
+	<b> {{k}} : {{dic[k]}} <br> </b>
+{% endfor %}
+<h2>Individual data</h2>
+{% for item in mvp_dict %}
+	{% for key in item %}
+	<b> {{key}} : {{item[key]}} <br> </b>
+	{% endfor %}
+	<br>
+{% endfor %}
+	
