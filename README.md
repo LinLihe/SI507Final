@@ -3,12 +3,12 @@
 * **Important**: 
 * Before running this code, please make sure you have chose appropriate `control variables`, `hard_path`, have filled in the `Secret.py` with correct information and installed the required packages in `requirements.txt`. 
 * Also, please use Python 3 to run this code. Moreover, this code has only been tested under Windows 10. If you use MAC to run this code and encounter some bugs, please try Windows.
-* Before running "SI507_Final_test.py", please make sure the control variable `"run_app" = False`, or you are unable to see the test result.
+* Before running `SI507F17_finalproject_test.py`, please make sure the control variable `"run_app" = False`, or you are unable to see the test result.
 Please see more details below.
 
 ## Part 0. Outline of the code.
 
-The python file `SI507_Final_code.py` contains codes to do the following:
+The python file `SI507F17_finalproject.py` contains codes to do the following:
 
   1. Use defined functions to cache the nba players' and teams' data for **a specific season** from hoops stats http://www.hoopsstats.com/.
   2. Processing players' and teams' data by two classes named `nba_player` and 'nba_team' respectively and return the data of every player or team as a tuple using a method named `return_for_database` in each class. 
