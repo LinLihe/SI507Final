@@ -1,4 +1,4 @@
-from SI507_Final_code import *
+from SI507F17_finalproject import *
 
 class Files_and_functions_check_part(unittest.TestCase):
 

@@ -1,10 +1,10 @@
 # SI 507 Final Project
 
-* **Important**: 
-* Before running this code, please make sure you have chose appropriate `control variables`, `hard_path`, have filled in the `Secret.py` with correct information and installed the required packages in `requirements.txt`. 
+## **Important before running** 
+* Before running this code, please make sure you have installed the required packages in `requirements.txt`  (using virtual environment would be recommanded). 
 * Also, please use Python 3 to run this code. Moreover, this code has only been tested under Windows 10. If you use MAC to run this code and encounter some bugs, please try Windows.
+* Chose appropriate `control variables`, `hard_path`, have filled in the `Secret.py` with correct information. (step details see part 2)
 * Before running `SI507F17_finalproject_test.py`, please make sure the control variable `"run_app" = False`, or you are unable to see the test result.
-Please see more details below.
 
 ## Part 0. Outline of the code.
 
@@ -84,9 +84,9 @@ The python file `SI507F17_finalproject.py` contains codes to do the following:
     a) Value: a number in string format, eg. "18", "09".
     b) **How to use**: Choose a season you want to check, the lastest one is "18". Here, "18" means season 2017-2018, "06" means season 2005-2006, etc.
     The supporting scope should be `"98"` to `"18"`.
-  3) `Upadate`:
+  3) `Update`:
     a) Value: True/False
-    b) **How to use**: It should be used combing with `Selection_season`. If it is true, the code will run to delete all files in a specific folder which includes all teams' and players' data for a specific NBA season.
+    b) **How to use**: It should be used combing with `Selection_season`. If it is true, the code will run to delete all files in a specific folder which includes all teams' and players' data for a specific NBA season. If you have sure you already have data in a season and it is in the database, it is fine to choose "False" for `Update` and choose `run_app` to "True" directly.
 
     Note: Basiclly we only use `Update` when `Select_season = "18"`, since new games happen everyday.
 
