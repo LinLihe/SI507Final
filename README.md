@@ -3,17 +3,17 @@
 ## **Important before running** 
 * Before running this code, please make sure you have installed the required packages in `requirements.txt`  (using virtual environment would be recommanded). 
 * Also, please use Python 3 to run this code. Moreover, this code has only been tested under Windows 10. If you use MAC to run this code and encounter some bugs, please try Windows.
-* Chose appropriate `control variables`, `hard_path`, have filled in the `Secret.py` with correct information. (step details see part 2)
+* Chose appropriate `control variables`, `hard_path`, have filled in the `Secret.py` with correct information. (**step details see part 2**)
 * Before running `SI507F17_finalproject_test.py`, please make sure the control variable `"run_app" = False`, or you are unable to see the test result.
 
 ## Part 0. Outline of the code.
 
 The python file `SI507F17_finalproject.py` contains codes to do the following:
 
-  1. Use defined functions to cache the nba players' and teams' data for **a specific season** from hoops stats http://www.hoopsstats.com/.
-  2. Processing players' and teams' data by two classes named `nba_player` and 'nba_team' respectively and return the data of every player or team as a tuple using a method named `return_for_database` in each class. 
-  3. Create a database with tables named "Players" and "Teams". Then input tuples created before to a appropriate table in terms of the information in tuple (about player or team).
-  4. Use `Flask` to show results.
+  1. Cached the nba players' and teams' data for **a specific season** from hoops stats http://www.hoopsstats.com/.
+  2. Processing players' and teams' data by two classes named `nba_player` and `nba_team` respectively and return the data of every player or team as a tuple using a method named `return_for_database` in each class. 
+  3. Create a database with tables named **"Players"** and **"Teams"**. Then input tuples created before to an appropriate table in terms of tuples' content.
+  4. Use `Flask` package to show results.
  
   Note: Users can only use this database to check players or teams performance in a specific season. If users are like to see a player's performance year to year, this code would not be able to provide such a result.
 
