@@ -134,7 +134,7 @@ The python file `SI507F17_finalproject.py` contains codes to do the following:
 
 ## Part 3 Test Code
 
-	Basiclly the test code tests most of functions (all listed in **Appendix**) for collecting or processing data, the attributes of two classes, and some key functions for applying "Flask". Here we use two files named "Cleveland Cavaliers_17.html" and "Cleveland Cavaliers_player_stats_17.html" as instances of "nba_player" and "nba_team" seperately in the test code.
+Basiclly the test code tests most of functions (all listed in **Appendix**) for collecting or processing data, the attributes of two classes, and some key functions for applying "Flask". Here we use two files named "Cleveland Cavaliers_17.html" and "Cleveland Cavaliers_player_stats_17.html" as instances of "nba_player" and "nba_team" seperately in the test code.
 
 ## Appendix. Function definition 
 
