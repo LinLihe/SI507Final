@@ -101,7 +101,7 @@ The python file `SI507F17_finalproject.py` contains codes to do the following:
 
   1) In Git, run `python3 SI507_Final_code runserver`.
   2) The code will access and cache the hoops stats website http://www.hoopsstats.com/ to get each team's page (eg. Atlanta Hawks in season 2017-2018: http://www.hoopsstats.com/basketball/fantasy/nba/atlanta-hawks/team/profile/18/1) and team's player's page (eg. Atlanta Hawks in season 2017-2018: http://www.hoopsstats.com/basketball/fantasy/nba/atlanta-hawks/team/playerstats/18/1/1). Therefore, in the folder you choose to store data, there should be 30 html files for teams, 30 html files for teams' players, and 1 html file for hoops stats main page. 
-  3) Pass the teams' collected from these pages to `nba_team` class we set up before. Then we will get a list named "team_list. The elements of the team list all instance of "nba_team" class. Since we need the "ID" in "Teams" table to bulid reference key in "Players" table, we need to build "Teams" table firstly, then use the "Teams" ID and class `nba_player` to build "Players" table. 
+  3) Pass the teams' collected from these pages to `nba_team` class we set up before. Then we will get a list named "team_list". The elements of the team list all instance of "nba_team" class. Since we need the "ID" in "Teams" table to bulid reference key in "Players" table, we need to build "Teams" table firstly, then use the "Teams" ID and class `nba_player` to build "Players" table. 
   4) Finally, we are able to open the web browser, input `localhost:5000` in address bar. We should be able to see "Welcome to NBA databse" on the screen if everything goes right.
 
 * **5. Use `localhost:5000` to see result**
