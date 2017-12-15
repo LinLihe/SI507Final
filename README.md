@@ -3,7 +3,7 @@
 ## **Important before running** 
 * Before running this code, please make sure you have installed the required packages in `requirements.txt`  (using virtual environment would be recommanded). 
 * Also, please use Python 3 to run this code. Moreover, this code has only been tested under Windows 10. If you use MAC to run this code and encounter some bugs, please try Windows.
-* Chose appropriate `control variables`, `hard_path`, have filled in the `Secret.py` with correct information. (**step details see part 2**)
+* Chose appropriate `control variables`, `hard_path`, have filled in the `Secret_data.py` with correct information. (**step details see part 2**)
 * Before running `SI507F17_finalproject_test.py`, please make sure the control variable `"run_app" = False`, or you are unable to see the test result.
 
 ## Part 0. Outline of the code.
@@ -73,7 +73,7 @@ The python file `SI507F17_finalproject.py` contains codes to do the following:
 
 *  **1. Prepare the environment**: Before running this code, User should make sure that the code will be runned by **Python 3** and all packages in **requirements.txt** have been installed correctly (you may create a virtual environment to do this).
 
-* **2. Build database**: Create a local database and fill in the value of variables in `Secret.py` according to the database's name, user's name and user's password.
+* **2. Build database**: Create a local database and fill in the value of variables in `Secret_data.py` according to the database's name, user's name and user's password.
 
 * **3. Control variables**: There are several control variables have to be set before running the code:
 
