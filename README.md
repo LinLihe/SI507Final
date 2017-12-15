@@ -132,7 +132,7 @@ The python file `SI507F17_finalproject.py` contains codes to do the following:
 	**Instruction**: There is no input. You can see the 30 player's name, player's point to team's point in percentage, player's rebound to team's rebound in percentage, player's assist to team's assist in percentage and team's name and 30 players average data. The result is calculated by the data from table "Players" and table "Teams".
 
 
-## Part 3 Test Code
+## Part 3. Test Code
 
 Basiclly the test code tests most of functions (all listed in **Appendix**) for collecting or processing data, the attributes of two classes, and some key functions for applying "Flask". Here we use two files named "Cleveland Cavaliers_17.html" and "Cleveland Cavaliers_player_stats_17.html" as instances of "nba_player" and "nba_team" seperately in the test code.
 
