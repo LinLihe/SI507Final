@@ -4,7 +4,7 @@ import requests
 import re
 import psycopg2
 import psycopg2.extras
-from Secret import *
+from Secret_data import *
 import os, errno
 import shutil
 from flask import Flask, render_template, request
