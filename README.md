@@ -15,13 +15,13 @@ The python file `SI507F17_finalproject.py` contains codes to do the following:
   3. Create a database with tables named **"Players"** and **"Teams"**. Then input tuples created before to an appropriate table in terms of tuples' content.
   4. Use `Flask` package to show results.
  
-  Note: Users can only use this database to check players or teams performance in a specific season. If users are like to see a player's performance year to year, this code would not be able to provide such a result.
+  Note: 1. A season here include both regular season games and play-off games; 2. Users can only use this database to check players or teams performance in a specific season. If users are like to see a player's performance year to year, this code would not be able to provide such a result.
 
 ## Part 1. Class definition
 
 * Class `nba_player` methods:
   
-  1. Constructor: Use a `Beautifulsoup instance` and a NBA `team name` as input. This constructor builds 14 attributes for this class, including: 
+  1. `Constructor`: Use a `Beautifulsoup instance` and a NBA `team name` as inputs. This constructor builds 14 attributes for this class (names here are not exactly same as names in the table), including: 
 	  	1) Player's name; (Primary key)
 	  	2) Attendance; 
 	  	3) Minute; 
@@ -37,20 +37,20 @@ The python file `SI507F17_finalproject.py` contains codes to do the following:
 	  	13) Efficiency; 
 	  	14) Player's team (Primary key and also Reference "Teams","ID")
 
-  2. repr: Return a string including all informtion built in the constructor.
+  2. `repr`: Return a string including all informtion built in the constructor.
 
-  3. contains: Input a player's and a team's name and check if they are both included in the `repr` method.
+  3. `contains`: Input a player's and a team's name and check if they are both included in the `repr` method.
 
-  4. return_for_database: return a tuple including all information built in the constructor.
+  4. `return_for_database`: return a tuple including all information built in the constructor.
 
   Note: 1) All data here is game-average.
 
 * Class `nba_team` methods:
 
-  1. Constructor: Use a `Beautifulsoup instance` as input. This constructor builds 13 attributes for this class, including: 
+  1. `Constructor`: Use a `Beautifulsoup instance` as input. This constructor builds 13 attributes for this class (names here are not exactly same as names in the table), including: 
 	    1) Team's name;
-	    2) Total game;
-	    3) Win game;
+	    2) Number of total game;
+	    3) Number of Win game;
 	    4) Point;
 	  	5) Rebound; 
 	  	6) Assist; 
@@ -63,9 +63,9 @@ The python file `SI507F17_finalproject.py` contains codes to do the following:
 	  	13) Efficiency; 
 	  	14) ID
 
-  2. repr: Return a string including all informtion built in the constructor.
+  2. `repr`: Return a string including all informtion built in the constructor.
 
-  3. return_for_database: return a tuple including all information built in the constructor.
+  3. `return_for_database`: return a tuple including all information built in the constructor.
 
   Note: All data here is game-average except Team's name, Total game, Win game.
 
