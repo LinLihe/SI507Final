@@ -120,7 +120,7 @@ The python file `SI507F17_finalproject.py` contains codes to do the following:
 	**Example**: Type "hawks" in the textbox and "send", you will see the data of team Atlanta Hawks. 
 
 	3) `localhost:5000/mvp`: **Show the best player of each team.**
-	**Instruction**: The  There is no input. You should be able to see 30 players' name, points, rebounds, assists and team and their average points, rebounds, assists in the page. The "Best player" is defined as the player who gets the largest number of the sum of "Point", "Rebound", and "Assist". 30 players should be different if the season is different. The result is calculated by the data from table "Players" and table "Teams"
+	**Instruction**: The  There is no input. You should be able to see 30 players' name, points, rebounds, assists and team and their average points, rebounds, assists in the page. The "Best player" is defined as the player who gets the largest number of the sum of "Point", "Rebound", and "Assist". 30 players should be different if the season is different. The result is calculated by the data from table "Players" and table "Teams".
 
 	4) `localhost:5000/player/average`: **Show the average data for all nba players**.
 	**Instruction**: There is no input. You should be able to see the average data which is for all NBA players. One thing need to be declared is that "all players" only includes players whose "Minute" is larger than 10.0 in order to filter out players who only playe in "garbage time". The result is calculated by the data from table "Players".
