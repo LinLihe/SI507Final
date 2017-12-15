@@ -14,7 +14,7 @@ import tempfile
 Cache_data_and_reset_table = False
 Select_season = "09" # The lastest season is (20)18
 Update = False # If Update = True, all cached files will be remove 
-run_app = False
+run_app = True
 hard_path = 'D:/507np1/SI507Final/html_files/' # User Input: Please change it according to your preference.
 
 ### Global Variables
@@ -69,7 +69,6 @@ def get_team_name_and_link(main_page_data, select_year = Select_season):
         single_name= all_teams[j].find_all("tr", class_="submenu")[n].text.strip()
         Team_list.append(single_name)
         Team_link = all_teams[j].find_all("tr", class_="submenu")[n].find("a")["href"].replace("18", str(select_year),1)
-        # print (Team_link)
         Team_link_list.append(Team_link) # Default season is 2017-2018, replace function makes season to be 2016-2017
     return Team_list, Team_link_list
 
@@ -98,7 +97,6 @@ class nba_player(object):
 
         individual_link = individual_bs.find("td",width = "9%").find("a")["href"]     
         self.name = re.search(r'players/([A-Za-z-]+)/', individual_link).group(1).replace("-"," ").title()
-        # self.team = team_name
         self.att = int(individual_bs.find("td", width = "3%").text)
         self.min = float(individual_bs.find_all("td", width = "4%")[0].text)
         self.pts = float(individual_bs.find_all("td", width = "4%")[1].text)
@@ -158,7 +156,6 @@ class nba_team(object):
 def execute_and_fetch(query):
     cur.execute(query)
     rec = cur.fetchall()
-    # print('--> Result ', rec)
     return rec
 
 def insert_team(tuple_):   
@@ -205,7 +202,7 @@ try:
 except:
     print ("Unable to connect to the database.")
     sys.exit(1)
-# print (team_list[0].return_for_database())
+
 if Reset_Tables == True:
 
     cur.execute("""DROP TABLE IF EXISTS "Players" """)   
@@ -248,10 +245,8 @@ if Reset_Tables == True:
 # Team's players pages cache/read and each player's data cache
     for n in range (len(team_list)):
         team_id = insert_team(team_list[n].return_for_database())
-    # for n in range (len(team_names)):
         player_item = get_individual_player_data(team_names[n], basic_link, team_players_link_list[n], path)
         for m in range (len(player_item)-2):
-            # player_list.append(nba_player(player_item[m]))
             insert_player(nba_player(player_item[m]).return_for_database(), team_id)   
 
 
@@ -378,23 +373,6 @@ def player_percentage():
 
     return render_template("mvp_pct.html", avg_dict = mvp_pct, season = Select_season, dic = avg_d)     
 
-@app.route("/mvp/average")
-def mvp_average():
-    MVP_Value = execute_and_fetch("""
-        SELECT 
-        (select "Players"."Name" from "Players" inner join "Teams" on "Teams"."ID" = "Players"."Team" where "Teams"."Name"=team_max."Team Name" and ("Players"."Assist"+"Players"."Point"+"Players"."Rebound") = team_max."Sum of Three Items") as "Player Name",        
-        (select "Players"."Point" from "Players" inner join "Teams" on "Teams"."ID" = "Players"."Team" where "Teams"."Name"=team_max."Team Name" and ("Players"."Assist"+"Players"."Point"+"Players"."Rebound") = team_max."Sum of Three Items"),
-        (select "Players"."Rebound" from "Players" inner join "Teams" on "Teams"."ID" = "Players"."Team" where "Teams"."Name"=team_max."Team Name" and ("Players"."Assist"+"Players"."Point"+"Players"."Rebound") = team_max."Sum of Three Items"),
-        (select "Players"."Assist" from "Players" inner join "Teams" on "Teams"."ID" = "Players"."Team" where "Teams"."Name"=team_max."Team Name" and ("Players"."Assist"+"Players"."Point"+"Players"."Rebound") = team_max."Sum of Three Items"),             
-        * 
-        from (
-            SELECT "Teams"."Name" as "Team Name", MAX("Players"."Assist"+"Players"."Point"+"Players"."Rebound") as "Sum of Three Items"
-            From "Players" INNER JOIN "Teams" on "Teams"."ID" = "Players"."Team"
-            GROUP BY "Teams"."Name" 
-            ORDER BY MAX("Players"."Assist"+"Players"."Point"+"Players"."Rebound") DESC 
-        ) as team_max
-    """)    
-    # for k,v in 
 if run_app == True:
     app.run(use_reloader=True, debug=True)
 

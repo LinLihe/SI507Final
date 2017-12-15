@@ -125,7 +125,10 @@ There may be several players have same name but in different team, which means o
 4) `localhost:5000/player/average`: **Show the average data for all nba players**.
 **Instruction**: There is no input. You should be able to see the average data which is for all NBA players. One thing need to be declared is that "all players" only includes players whose "Minute" is larger than 10.0 in order to filter out players who only playe in "garbage time". The result is calculated by the data from table "Players".
 
-5) `localhost:5000/mvp/percentage`: **Show the best players in each team contribute how much in team's points, rebounds and assists (in percentage).**
+5) `localhost:5000/team/average`: **Show the average data for all nba teams**.
+**Instruction**: There is no input. You should be able to see the average data which is for all NBA team. 
+
+6) `localhost:5000/team/percentage`: **Show the best players in each team contribute how much in team's points, rebounds and assists (in percentage).**
 **Instruction**: There is no input. You can see the 30 player's name, player's point to team's point in percentage, player's rebound to team's rebound in percentage, player's assist to team's assist in percentage and team's name and 30 players average data. The result is calculated by the data from table "Players" and table "Teams".
 
 
