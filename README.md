@@ -85,13 +85,13 @@ The python file `SI507F17_finalproject.py` contains codes to do the following:
     b) **How to use**: Choose a season you want to check, the lastest one is "18". Here, "18" means season 2017-2018, "06" means season 2005-2006, etc.
     The supporting scope should be `"98"` to `"18"`.
   3) `Update`:
-    a) Value: True/False
+    a) Value: True/False.
     b) **How to use**: It should be used combing with `Selection_season`. If it is true, the code will run to delete all files in a specific folder which includes all teams' and players' data for a specific NBA season. If you have sure you already have data in a season and it is in the database, it is fine to choose "False" for `Update` and choose `run_app` to "True" directly.
 
     Note: Basiclly we only use `Update` when `Select_season = "18"`, since new games happen everyday.
 
   4) `run_app`: 
-    a) Value: True/False
+    a) Value: True/False.
     b) **How to use**: If it is true, the code will run the `Flask` part to show results.
 
   5) `hard_path`: User should input a path which is the place to store all data cached by this code.
@@ -128,7 +128,7 @@ The python file `SI507F17_finalproject.py` contains codes to do the following:
 	5) `localhost:5000/team/average`: **Show the average data for all nba teams**.
 	**Instruction**: There is no input. You should be able to see the average data which is for all NBA team. 
 
-	6) `localhost:5000/team/percentage`: **Show the best players in each team contribute how much in team's points, rebounds and assists (in percentage).**
+	6) `localhost:5000/mvp/percentage`: **Show the best players in each team contribute how much in team's points, rebounds and assists (in percentage).**
 	**Instruction**: There is no input. You can see the 30 player's name, player's point to team's point in percentage, player's rebound to team's rebound in percentage, player's assist to team's assist in percentage and team's name and 30 players average data. The result is calculated by the data from table "Players" and table "Teams".
 
 
